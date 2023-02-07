@@ -32,14 +32,17 @@ const store = useStore();
 const cartItems = computed(() => store.getters.getCheckout);
 
 const redirectToStripe = async () => {
-  const { url } = await fetch("http://localhost:5000/create-checkout-session", {
-    method: "POST",
-    headers: {
-      Accept: "application/json",
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(cartItems.value),
-  }).then((response) => response.json());
+  const { url } = await fetch(
+    "https://thriving-alpaca-cefda9.netlify.app/create-checkout-session",
+    {
+      method: "POST",
+      headers: {
+        Accept: "application/json",
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(cartItems.value),
+    }
+  ).then((response) => response.json());
 
   window.location.href = url;
 };
