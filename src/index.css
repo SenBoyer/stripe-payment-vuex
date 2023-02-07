@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Noto Serif", serif, Ariel, Helvetica, sans-serif;
+  background: #d7d7d7;
+}
+
+img {
+  width: 100%;
+  object-fit: contain;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif&display=swap");

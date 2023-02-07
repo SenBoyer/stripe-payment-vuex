@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@1,800&display=swap');
+
+.navbar {
+  width: 100%;
+  background-color: rgb(139 139 144);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem 1rem;
+  z-index: 50
+
+}
+
+.navbar_logo {
+  display: flex;
+}
+
+.navbar_logo > h2 {
+  font-family:'Playfair Display', serif;
+  font-size: 2rem;
+  color: black;
+  cursor: pointer}
+
+.navbar_logo > img {
+  width: 50px;
+  height: 50px;
+}
+
+.link-home{
+  text-decoration: none;
+  color: black;
+}
+
+.navbar_links {
+  display: flex;
+  list-style: none;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.navbar_links > li {
+  padding-left: 1.5rem;
+}
+
+.navbar_links > li > a {
+  color: #f4f4f4;
+  font-size: 1.2rem;
+  display: flex;
+  text-decoration: none;
+}
+
+.navbar_links > li > a > span {
+  display: flex;
+  align-items: center;
+  margin-left: 8px
+}
+
+.cart_link {
+  background: #333;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.cart_link:hover{
+  background: red;
+  color: #f4f4f4;
+}
+
+.cartlogo_badge{
+  width: 30px;
+  height: 30px;
+  background: #f4f4f4;
+  border-radius: 50%;
+  margin-left: 8px;
+  color: #171717;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 1rem;
+}
+
+.hamburger_menu {
+  transform: scale(1.3);
+  display: none;
+  cursor: pointer;
+}
+
+.hamburger_menu > div {
+  height: 3px;
+  background: #f4f4f4;
+}
+
+.hamburger_menu:hover > div{
+  background: #dd219e
+}
+
+@media (max-width: 760px){
+  .navbar_links {
+    display: none;
+  }
+
+  .hamburger_menu {
+    display: flex;
+
+  }
+}
