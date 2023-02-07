@@ -125,6 +125,11 @@ const item = computed(() => store.getters.getSelectedProduct);
   cursor: pointer;
 }
 
+.right_info p > button:hover {
+  background: #d7d7d7;
+  color: black;
+}
+
 .right_info select {
   padding: 10px 16px;
 }
@@ -155,6 +160,11 @@ const item = computed(() => store.getters.getSelectedProduct);
   .right_info {
     width: 100%;
     margin: 0;
+  }
+
+  .right_info p > button:hover {
+    background: #d7d7d7;
+    color: black;
   }
 }
 </style>
