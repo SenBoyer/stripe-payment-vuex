@@ -33,7 +33,7 @@ const cartItems = computed(() => store.getters.getCheckout);
 
 const redirectToStripe = async () => {
   const { url } = await fetch(
-    "https://thriving-alpaca-cefda9.netlify.app/create-checkout-session",
+    "https://stripe-vue-backend.herokuapp.com/create-checkout-session",
     {
       method: "POST",
       headers: {
