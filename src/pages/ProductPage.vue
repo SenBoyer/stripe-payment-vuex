@@ -27,6 +27,11 @@
             <button type="button" @click="addToCart(quantity)">
               Add to Cart
             </button>
+            <router-link to="/cart" class="cart-button">
+              <button type="button" @click="addToCart(quantity)">
+                Proceed to Cart
+              </button>
+            </router-link>
           </p>
         </div>
       </div>
@@ -113,7 +118,6 @@ const item = computed(() => store.getters.getSelectedProduct);
   padding: 1rem;
   font-size: 0.8rem;
   display: grid;
-  grid-template-columns: repeat)2, 1fr);
 }
 
 .right_info p > button {
@@ -123,6 +127,23 @@ const item = computed(() => store.getters.getSelectedProduct);
   color: #f4f4f4;
   border: 1px solid #171717;
   cursor: pointer;
+  margin-bottom: 5px;
+}
+
+.cart-button button {
+  text-decoration: none;
+  width: 100%;
+  grid-column: 1/-1;
+  padding: 10px 16px;
+  background: #171717;
+  color: #f4f4f4;
+  border: 1px solid #171717;
+  cursor: pointer;
+}
+
+.cart-button button:hover {
+  background: #d7d7d7;
+  color: black;
 }
 
 .right_info p > button:hover {
